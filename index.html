@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="BenAliz - Akademik Enneagram Kişilik Analizi Testi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>BenAliz — Kişilik Analizi</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #F9F5EE;
+      overflow: hidden;
+    }
+    #loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #F9F5EE;
+      font-family: 'DM Sans', sans-serif;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .loading-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #1A1410;
+      letter-spacing: -0.5px;
+    }
+    .loading-logo span { color: #B8860B; }
+    .loading-bar {
+      width: 48px;
+      height: 2px;
+      background: #B8860B;
+      border-radius: 2px;
+      animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="loading-logo">Ben<span>Aliz</span></div>
+    <div class="loading-bar"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function() {
+      var loading = document.getElementById('loading');
+      if (loading) loading.style.display = 'none';
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
